@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Item from './item';
 
-const Items = ({ item }) => {
-  const itemElements = item.map((item, i) =>
+const Items = ({ items }) => {
+  const itemElements = items.map((item, i) =>
     (<li key={i}>
-      <Item item={item} />
+      <Item name={item.name} image={item.image}/>
     </li>));
   return (
     <>
@@ -18,7 +18,7 @@ const Items = ({ item }) => {
 };
 
 Items.propTypes = {
-  item: PropTypes.arrayOf(PropTypes.shape({
+  items: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired
   })).isRequired

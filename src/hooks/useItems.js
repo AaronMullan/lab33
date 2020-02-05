@@ -7,7 +7,7 @@ export const useItems = () => {
   useEffect(() => {
     getItems()
       .then(items => setItems(items));
-  });
+  }), [];
 
-  return { items };
+  return { items, useItems };
 };

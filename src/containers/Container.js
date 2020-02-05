@@ -8,6 +8,8 @@ const Container = () => {
   return (
     <>
       <h1>Hello From Container</h1>
+      <button onClick={useItems}>Get Items</button>
+      <Items items={items} />
     </>
   );
 };
