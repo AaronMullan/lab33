@@ -2,10 +2,19 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Swich,
-  Link
+  Switch,
+  // Link
 } from 'react-router-dom';
+import Container from '../containers/Container';
 
 export default function App() {
-  return <h1>React Router Viewer</h1>;
+  return (
+    <>
+      <Router>
+        <Switch>
+          <Route path="/" component={Container} />
+        </Switch>
+      </Router>
+    </>
+  );
 }
