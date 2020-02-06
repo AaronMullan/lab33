@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Item = ({ name, image, id }) => (
+export const Item = ({ name, image, id }) => (
 
   <section>
-    <Link to={`DetailContainer/${id}`}>
+    <Link to={`/details/${id}`}>
       <h2>{name}</h2>
       <img src={image} alt={name}/>
     </Link>
@@ -18,4 +18,4 @@ Item.propTypes = {
   id: PropTypes.number.isRequired
 };
 
-export default Item;
+
