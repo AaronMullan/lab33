@@ -3,12 +3,20 @@ import Items from '../components/items/Items';
 import { useItems } from '../hooks/useItems';
 
 const Container = () => {
-  const { items } = useItems();
+  const { items, getNewItems, setPageNumber, pageNumber } = useItems();
 
   return (
     <>
       <h1>Characters</h1>
-      <button onClick={useItems}>Get Items</button>
+      <label>
+        Page Number
+        <input 
+          name="pageNumber"
+          type="number"
+          value={pageNumber}
+          onChange={setPageNumber}/>
+      </label>
+      <button onClick={getNewItems}>Get Items</button>
       <Items items={items} />
     </>
   );

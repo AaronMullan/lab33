@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { useItems } from '../../hooks/useItems';
 
 const Detail = ({ name, image, status, species }) => {
+
+  const { items } = useItems();
+ 
   
   return (
     <section>
-      <img src={image} alt={name}/>
+      <img src={items.image} alt={name}/>
       <h2>{name}</h2>
       <p>{status}</p>
       <p>{species}</p>

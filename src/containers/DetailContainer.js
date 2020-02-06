@@ -1,10 +1,13 @@
 import React from 'react';
 import Detail from '../components/details/Detail';
 import { useItems } from '../hooks/useItems';
+import { useParams } from 'react-router-dom';
 
 
-const DetailContainer = () => {
+const DetailContainer = ({ match }) => {
   const { items } = useItems();
+  const { id } = useParams();
+  console.log(items);
 
   return (
     <>

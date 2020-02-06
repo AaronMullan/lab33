@@ -3,11 +3,18 @@ import { getItems } from '../services/getItems';
 
 export const useItems = () => {
   const [items, setItems] = useState([]);
+  const [pageNumber, setPageNumber] = useState(5);
 
   useEffect(() => {
-    getItems()
+    getItems(pageNumber)
       .then(items => setItems(items));
-  }), [];
+  }, []);
 
-  return { items, useItems };
+  const getNewItems = () => {
+    getItems(pageNumber)
+      .then(items => setItems(items));
+  };
+
+  return { items, pageNumber, setPageNumber, getNewItems };
 };
+

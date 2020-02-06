@@ -3,11 +3,11 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  // Link
 } from 'react-router-dom';
+
 import Header from '../components/header/Header';
 import Container from '../containers/Container';
-import DetailContainer from '../containers/DetailContainer';
+import Detail from '../components/details/Detail';
 
 export default function App() {
   return (
@@ -15,8 +15,8 @@ export default function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/" component={Container} />
-          <Route path="/details" component={DetailContainer} />
+          <Route path="/details/:id" component={Detail} />
+          <Route exact path="/" component={Container} />
         </Switch>
       </Router>
     </>

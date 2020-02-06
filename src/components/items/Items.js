@@ -5,7 +5,7 @@ import Item from './Item';
 const Items = ({ items }) => {
   const itemElements = items.map((item) =>
     (<li key={item.id}>
-      <Item name={item.name} image={item.image}/>
+      <Item name={item.name} image={item.image} id={item.id}/>
     </li>));
   return (
     <>
