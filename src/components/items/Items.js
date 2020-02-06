@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Item from './item';
+import Item from './Item';
 
 const Items = ({ items }) => {
-  const itemElements = items.map((item, i) =>
-    (<li key={i}>
+  const itemElements = items.map((item) =>
+    (<li key={item.id}>
       <Item name={item.name} image={item.image}/>
     </li>));
   return (
     <>
-      <h2>hello</h2>
       <ul>
         {itemElements}
       </ul>

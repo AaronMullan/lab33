@@ -7,7 +7,7 @@ const Container = () => {
 
   return (
     <>
-      <h1>Hello From Container</h1>
+      <h1>Characters</h1>
       <button onClick={useItems}>Get Items</button>
       <Items items={items} />
     </>
